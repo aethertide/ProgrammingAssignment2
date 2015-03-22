@@ -2,6 +2,7 @@
 ## These functions create a square Matrix, and will then calculate the inverse and then store it.
 
 ## This function creates a special "matrix" object that can cache its inverse.
+## The matrix needs to be square for this to work.
 makeCacheMatrix <- function(x = matrix()) {
   ## Store the cache, it is initially null
   cache <- NULL
@@ -36,6 +37,7 @@ cacheSolve <- function(x, ...) {
     message("getting inverse data")
     return(i)
   }
+  
   message("calculating inverse data")
   ## get the matrix
   data <- x$get()
